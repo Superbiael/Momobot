@@ -139,7 +139,7 @@ bot.on('message', message => {
       }
 
    if(msg.startsWith (prefix + "quote")) {
-     number = 21;
+     number = 22;
      var random = Math.floor (Math.random() * (number)) + 1;
      switch (random) {
        case 1: message.channel.send ("... Wha! I'm not sleeping! I absolutely wasn't sleeping just now!"); break;
@@ -163,7 +163,7 @@ bot.on('message', message => {
        case 19: message.channel.send ("I had felt like my dreams were never gonna come true. But the moment I heard that song, all of my frustration and sadness were swept away. \nLike I had gotten washed clean by the waves."); break;
        case 20: message.channel.send ("on my off days, I exercise! I also eat yummy food!! Laughing and taking deep breaths before bed helps you relax naturally so I recommend that too! \nBut ny number one way is seeing my partner's smile! It melts away all my fatigue!"); break;
        case 21: message.channel.send ("What I like about myself is that I've got guts and stamina!\nThough I guess you could also that I'm too persistent..."); break;
-       // case 22: message.channel.send (""); break;
+       case 22: message.channel.send ("I'm not letting you go home tonight..."); break;
        // case 23: message.channel.send (""); break;
        // case 24: message.channel.send (""); break;
     }
