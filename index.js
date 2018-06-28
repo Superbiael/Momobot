@@ -191,7 +191,7 @@ bot.on('message', message => {
          .addField("Commands:","**m!momo** *<question>* | Ask him anything. \n**m!send** *<@user> <message>* | Send a DM to the mentioned user\n**m!scout** | Solo Yolo \n**m!quote** | Random quote\n**m!say** *<message>* | Have the bot say anything you want\n**m!help** | Displays this help message")
          .addField("Basic m!commands:", "mafia (alias:maf) || ryo || rank")
          .addField("Command phrases:", "I can't believe Ryo is dead || Hey gays || Good morning Momo || Good night Momo")
-         botschannel.send(helpembed);
+         return botschannel.send(helpembed);
        }
 
        if(cmd ===`${prefix}botinfo`){
@@ -202,7 +202,7 @@ bot.on('message', message => {
          .setThumbnail(bicon)
          .addField("Name:", bot.user.username)
          .addField("Twitter:", "https://twitter.com/Superbiael")
-       return message. channel.send(botembed);
+       return botschannel.send(botembed);
        }
 
          if(cmd === `${prefix}say`){
