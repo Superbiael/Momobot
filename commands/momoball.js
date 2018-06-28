@@ -8,12 +8,13 @@ module.exports.run = async (bot, message, args) => {
    let question = args.slice(0).join(" ");
 
    let ballembed = new Discord.RichEmbed()
-   .setAuthor(message.author.tag)
    .setColor("#fe00b6")
    .addField("Question:", question)
    .addField("Answer:", replies[result]);
 
-   message.channel.send(ballembed);
+   let botschannel = message.guild.channels.find(`name`, "idolbot7");
+   if(!botschannel) return message.channel.send("Couldn't find bot channel.");
+   botschannel.send(ballembed);
 }
 
 module.exports.help = {
