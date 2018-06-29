@@ -204,7 +204,10 @@ bot.on('message', message => {
          .addField("Twitter:", "https://twitter.com/Superbiael")
        return botschannel.send(botembed);
        }
-
+  
+    if(cmd === `${prefix}cat`){
+    botschannel.send ({files:["./images/nya.png"]});
+  }
          if(cmd === `${prefix}say`){
            let botmessage = args.join(" ");
            message.delete().catch();
