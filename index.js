@@ -189,7 +189,7 @@ bot.on('message', message => {
          .setDescription("Do not include < > when using commands. \nCommand phrases are not caps sensitive")
          .setColor("#fe00b6")
          .addField("Commands:","**m!momo** *<question>* | Ask him anything. \n**m!send** *<@user> <message>* | Send a DM to the mentioned user\n**m!scout** | Solo Yolo \n**m!quote** | Random quote\n**m!say** *<message>* | Have the bot say anything you want\n**m!help** | Displays this help message")
-         .addField("Basic m!commands:", "mafia (alias:maf) || ryo || rank")
+         .addField("Basic m!commands:", "mafia (alias:maf) || ryo || rank || cat")
          .addField("Command phrases:", "I can't believe Ryo is dead || Hey gays || Good morning Momo || Good night Momo")
          return botschannel.send(helpembed);
        }
