@@ -23,7 +23,7 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("\(。ゝω・)ノ☆", {type:0});
+  bot.user.setActivity("RyuuuSou", {type:"WATCHING"});
 });
 
 bot.on('message', message => {
