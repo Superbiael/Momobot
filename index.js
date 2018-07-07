@@ -28,7 +28,7 @@ bot.on("ready", async () => {
 
 bot.on('message', message => {
   if (message.author.bot) return;
-    // if(message.channel.type === "dm") return;
+    if(message.channel.type === "dm") return;
 
     let prefix = 'm!';
     let messageArray = message.content.split(" ");
@@ -59,17 +59,8 @@ bot.on('message', message => {
        switch (random) {
          case 1: botschannel.send ("It’s embarrassing to hear you say that! \(。ゝω・)ノ☆;:*"); break;
          case 2: botschannel.send ("Fufufu, I see you have fallen under my spell~ (///pωq///)"); break;
-         // case 3: message.channel.send (""); break;
-         // case 4: message.channel.send (""); break;
-         // case 5: message.channel.send (""); break;
-         // case 6: message.channel.send (""); break;
       }
     }
-
-     // if (msg.startsWith ("i love you yuki")) {
-     //   if(message.author.id != "182723698711592960") return;
-     //      return message.channel.send("This means war.");
-     //    }
 
    if(msg.startsWith (prefix + "rank")) {
        number = 5;
@@ -84,8 +75,6 @@ bot.on('message', message => {
     }
 
     if(msg.startsWith (prefix + "scout")) {
-      // let emoji = message.guild.emojis.find('name', "yuppi");
-      // message.react(emoji);
         number = 41;
         var random = Math.floor (Math.random() * (number)) + 1;
         switch (random) {
@@ -138,7 +127,6 @@ bot.on('message', message => {
         message.delete();
         mentionMessage = message.content.slice(6);
         mention.send (mentionMessage);
-        // return message.channel.send ("Message sent.");
       }
 
       if(msg.startsWith (prefix + "quote")) {
@@ -167,8 +155,6 @@ bot.on('message', message => {
           case 20: botschannel.send ("on my off days, I exercise! I also eat yummy food!! Laughing and taking deep breaths before bed helps you relax naturally so I recommend that too! \nBut ny number one way is seeing my partner's smile! It melts away all my fatigue!"); break;
           case 21: botschannel.send ("What I like about myself is that I've got guts and stamina!\nThough I guess you could also that I'm too persistent..."); break;
           case 22: botschannel.send ("I'm not letting you go home tonight..."); break;
-          // case 23: botschannel.send (""); break;
-          // case 24: botschannel.send (""); break;
        }
      }
 
@@ -202,7 +188,6 @@ bot.on('message', message => {
          .setThumbnail(bicon)
          .addField("# of quotes:", "22")
          .addField("Scout:", "41")
-         .addField("Twitter:", "https://twitter.com/Superbiael")
        return botschannel.send(botembed);
        }
   
