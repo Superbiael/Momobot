@@ -119,7 +119,7 @@ bot.on('message', message => {
           case 39: botschannel.send ({files:["./images/momo_visualartexpo_ssr.png"]}); break;
           case 40: botschannel.send ({files:["./images/momo_shuffle_ssr.png"]}); break;
           case 41: botschannel.send ({files:["./images/momo_visualartexpo_ssr.png"]}); break;
-          case 42: botschannel.send ({files:[".images/momo_rti_ssr.png"]}); break;
+          case 42: botschannel.send ({files:["./images/momo_rti_ssr.png"]}); break;
         }
       }
 
