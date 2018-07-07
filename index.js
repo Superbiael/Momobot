@@ -23,7 +23,7 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("RyuuuSou", {type:"WATCHING"});
+  bot.user.setActivity("Ryuusou", {type:"WATCHING"});
 });
 
 bot.on('message', message => {
@@ -75,7 +75,7 @@ bot.on('message', message => {
     }
 
     if(msg.startsWith (prefix + "scout")) {
-        number = 41;
+        number = 42;
         var random = Math.floor (Math.random() * (number)) + 1;
         switch (random) {
           case 1: botschannel.send ({files:["./images/momo_birthday_sr.png"]}); break;
@@ -119,6 +119,7 @@ bot.on('message', message => {
           case 39: botschannel.send ({files:["./images/momo_visualartexpo_ssr.png"]}); break;
           case 40: botschannel.send ({files:["./images/momo_shuffle_ssr.png"]}); break;
           case 41: botschannel.send ({files:["./images/momo_visualartexpo_ssr.png"]}); break;
+          case 42: botschannel.send ({files:[".images/momo_rti_ssr.png"]}); break;
         }
       }
 
@@ -152,7 +153,7 @@ bot.on('message', message => {
           case 17: botschannel.send ("Practice makes perfect~!"); break;
           case 18: botschannel.send ("I have to pretend I'm a real senpai by helping out the young ones sometimes."); break;
           case 19: botschannel.send ("I had felt like my dreams were never gonna come true. But the moment I heard that song, all of my frustration and sadness were swept away. \nLike I had gotten washed clean by the waves."); break;
-          case 20: botschannel.send ("on my off days, I exercise! I also eat yummy food!! Laughing and taking deep breaths before bed helps you relax naturally so I recommend that too! \nBut ny number one way is seeing my partner's smile! It melts away all my fatigue!"); break;
+          case 20: botschannel.send ("On my off days, I exercise! I also eat yummy food!! Laughing and taking deep breaths before bed helps you relax naturally so I recommend that too! \nBut ny number one way is seeing my partner's smile! It melts away all my fatigue!"); break;
           case 21: botschannel.send ("What I like about myself is that I've got guts and stamina!\nThough I guess you could also that I'm too persistent..."); break;
           case 22: botschannel.send ("I'm not letting you go home tonight..."); break;
        }
@@ -175,7 +176,7 @@ bot.on('message', message => {
          .setDescription("Do not include < > when using commands. \nCommand phrases are not caps sensitive")
          .setColor("#fe00b6")
          .addField("Commands:","**m!momo** *<question>* | Ask him anything. \n**m!send** *<@user> <message>* | Send a DM to the mentioned user\n**m!scout** | Solo Yolo \n**m!quote** | Random quote\n**m!say** *<message>* | Have the bot say anything you want\n**m!help** | Displays this help message")
-         .addField("Basic m!commands:", "mafia (alias:maf) || ryo || rank || cat")
+         .addField("Basic m!commands:", "mafia (alias:maf) || ryo || rank")
          .addField("Command phrases:", "I can't believe Ryo is dead || Hey gays || Good morning Momo || Good night Momo")
          return botschannel.send(helpembed);
        }
@@ -187,13 +188,10 @@ bot.on('message', message => {
          .setColor("#fe00b6")
          .setThumbnail(bicon)
          .addField("# of quotes:", "22")
-         .addField("Scout:", "41 cards")
+         .addField("Scout:", "42 cards")
        return botschannel.send(botembed);
        }
-  
-    if(cmd === `${prefix}cat`){
-    botschannel.send ({files:["./images/nya.png"]});
-  }
+
          if(cmd === `${prefix}say`){
            let botmessage = args.join(" ");
            message.delete().catch();
@@ -209,4 +207,5 @@ bot.on('message', message => {
        }
 
 });
+
 bot.login(process.env.token);
