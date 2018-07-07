@@ -200,7 +200,8 @@ bot.on('message', message => {
          .setDescription("Bot Information")
          .setColor("#fe00b6")
          .setThumbnail(bicon)
-         .addField("Name:", bot.user.username)
+         .addField("# of quotes:", "22")
+         .addField("Scout:", "41")
          .addField("Twitter:", "https://twitter.com/Superbiael")
        return botschannel.send(botembed);
        }
