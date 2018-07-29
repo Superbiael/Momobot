@@ -74,54 +74,11 @@ bot.on('message', message => {
       }
     }
 
-    if(msg.startsWith (prefix + "scout")) {
-        number = 42;
-        var random = Math.floor (Math.random() * (number)) + 1;
-        switch (random) {
-          case 1: botschannel.send ({files:["./images/momo_birthday_sr.png"]}); break;
-          case 2: botschannel.send ({files:["./images/momo_birthday_ssr.png"]}); break;
-          case 3: botschannel.send ({files:["./images/momo_disone_ssr.png"]}); break;
-          case 4: botschannel.send ({files:["./images/momo_esperanza_ssr.png"]}); break;
-          case 5: botschannel.send ({files:["./images/momo_gardentea_ssr.png"]}); break;
-          case 6: botschannel.send ({files:["./images/momo_gothichalloween_ssr.png"]}); break;
-          case 7: botschannel.send ({files:["./images/momo_kingpudding_ssr.png"]}); break;
-          case 8: botschannel.send ({files:["./images/momo_kiseki_ur.png"]}); break;
-          case 9: botschannel.send ({files:["./images/momo_linked_ssr.png"]}); break;
-          case 10: botschannel.send ({files:["./images/momo_lullaby_ssr.png"]}); break;
-          case 11: botschannel.send ({files:["./images/momo_marchen_ssr.png"]}); break;
-          case 12: botschannel.send ({files:["./images/momo_monster_sr.png"]}); break;
-          case 13: botschannel.send ({files:["./images/momo_monster_ssr.png"]}); break;
-          case 14: botschannel.send ({files:["./images/momo_nodoubt_sr.png"]}); break;
-          case 15: botschannel.send ({files:["./images/momo_nodoubt_ssr.png"]}); break;
-          case 16: botschannel.send ({files:["./images/momo_order_ssr.png"]}); break;
-          case 17: botschannel.send ({files:["./images/momo_ordinarydays_r.png"]}); break;
-          case 18: botschannel.send ({files:["./images/momo_ordinarydays_sr.png"]}); break;
-          case 19: botschannel.send ({files:["./images/momo_ordinarydays_ssr.png"]}); break;
-          case 20: botschannel.send ({files:["./images/momo_rabbit_sr.png"]}); break;
-          case 21: botschannel.send ({files:["./images/momo_rabbit_ssr.png"]}); break;
-          case 22: botschannel.send ({files:["./images/momo_rehearsal_sr.png"]}); break;
-          case 23: botschannel.send ({files:["./images/momo_rehearsal_ssr.png"]}); break
-          case 24: botschannel.send ({files:["./images/momo_rehearsal_ur.png"]}); break;
-          case 25: botschannel.send ({files:["./images/momo_sparkle_ssr.png"]}); break;
-          case 26: botschannel.send ({files:["./images/momo_xmasmagic_ssr.png"]}); break;
-          case 27: botschannel.send ({files:["./images/momo_sweets_ssr.png"]}); break;
-          case 28: botschannel.send ({files:["./images/momo_taiko_ssr.png"]}); break;
-          case 29: botschannel.send ({files:["./images/momo_taisho_ssr.png"]}); break;
-          case 30: botschannel.send ({files:["./images/momo_valentine_ssr.png"]}); break;
-          case 31: botschannel.send ({files:["./images/momo_whiteday_sr.png"]}); break;
-          case 32: botschannel.send ({files:["./images/momo_whiteday_ssr.png"]}); break;
-          case 33: botschannel.send ({files:["./images/momo_winter_sr.png"]}); break;
-          case 34: botschannel.send ({files:["./images/momo_winter_ssr.png"]}); break;
-          case 35: botschannel.send ({files:["./images/momo_work_sr.png"]}); break;
-          case 36: botschannel.send ({files:["./images/momo_work_ssr.png"]}); break;
-          case 37: botschannel.send ({files:["./images/momo_xmasrock_ssr.png"]}); break;
-          case 38: botschannel.send ({files:["./images/momo_zodiac_ssr.png"]}); break;
-          case 39: botschannel.send ({files:["./images/momo_visualartexpo_ssr.png"]}); break;
-          case 40: botschannel.send ({files:["./images/momo_shuffle_ssr.png"]}); break;
-          case 41: botschannel.send ({files:["./images/momo_visualartexpo_ssr.png"]}); break;
-          case 42: botschannel.send ({files:["./images/momo_rti_ssr.png"]}); break;
-        }
-      }
+    if (msg.startsWith (prefix + "scout")) {
+      number = 41;
+      imageNumber = Math.floor (Math.random() * (number)) + 1;
+      botschannel.send ({files: ["./scout/" + imageNumber + ".png"]})
+    }
 
   if (msg.startsWith (prefix + "send")) {
        if (mention == null) { return; }
