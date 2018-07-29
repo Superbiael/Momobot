@@ -1,0 +1,5 @@
+    if (msg.startsWith (prefix + "scout")) {
+      number = 40;
+      imageNumber = Math.floor (Math.random() * (number)) + 1;
+      message.channel.send ({files: ["./scout/" + imageNumber + ".png"]})
+    }
