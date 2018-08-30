@@ -114,7 +114,7 @@ bot.on('message', message => {
           case 21: botschannel.send ("What I like about myself is that I've got guts and stamina!\nThough I guess you could also that I'm too persistent..."); break;
           case 22: botschannel.send ("I'm not letting you go home tonight..."); break;
           case 23: botschannel.send ("I shined brighter and brighter so I wouldn't be outshined by the light I reached for. Before I realized it, that light became my own. That light is now shining the way for someone else."); break;
-          // case 24: botschannel.send (""); break;
+          case 24: botschannel.send ("Good work everyday, Maneko-chan! Thanks for making our everyday inspiring and happy! Here, I'll give you this Momorin with limited edition wrapper!"); break;
        }
      }
 
@@ -146,7 +146,7 @@ bot.on('message', message => {
          .setDescription("Bot Information")
          .setColor("#fe00b6")
          .setThumbnail(bicon)
-         .addField("# of quotes:", "23")
+         .addField("# of quotes:", "24")
          .addField("Scout:", "42 cards")
        return botschannel.send(botembed);
        }
