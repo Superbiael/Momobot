@@ -165,6 +165,10 @@ bot.on('message', message => {
          return botschannel.send("Oh fuck. Bastard spotted.");
        }
 
+      if(cmd === `${prefix}cat`){
+        return botschannel.send ({files:["./images/nya.png"]});
+  }
+  
 });
 
 bot.login(process.env.token);
