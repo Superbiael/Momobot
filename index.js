@@ -37,8 +37,8 @@ bot.on('message', message => {
     let commandfile = bot.commands.get(cmd.slice(prefix.length));
     if(commandfile) commandfile.run(bot,message,args);
 
-   let botschannel = message.guild.channels.find(`name`, "bot-channel");
-   if(!botschannel) return;
+    let botschannel = message.guild.channels.find(`name`, "idolbot7");
+    if(!botschannel) return message.channel.send("Couldn't find bot channel.");
 
      msg = message.content.toLowerCase();
      mention = message.mentions.users.first();
@@ -62,22 +62,10 @@ bot.on('message', message => {
       }
     }
 
-   if(msg.startsWith (prefix + "rank")) {
-       number = 5;
-       var random = Math.floor (Math.random() * (number)) + 1;
-       switch (random) {
-         case 1: botschannel.send ("Yay! Let's celebrate with momorin!"); break;
-         case 2: botschannel.send ("You did your best! I'm going to praise you!"); break;
-         case 3: botschannel.send ("You got a passing grade!"); break;
-         case 4: botschannel.send ("We're going to have intense special training tomorrow!"); break;
-         case 5: botschannel.send ("Uuu... What happened?"); break;
-      }
-    }
-
     if (msg.startsWith (prefix + "scout")) {
-      number = 45;
+      number = 42;
       imageNumber = Math.floor (Math.random() * (number)) + 1;
-      botschannel.send ({files: ["./scout/" + imageNumber + ".png"]})
+      message.channel.send ({files: ["./scout/" + imageNumber + ".png"]})
     }
 
   if (msg.startsWith (prefix + "send")) {
@@ -88,7 +76,7 @@ bot.on('message', message => {
       }
 
       if(msg.startsWith (prefix + "quote")) {
-        number = 24;
+        number = 26;
         var random = Math.floor (Math.random() * (number)) + 1;
         switch (random) {
           case 1: botschannel.send ("... Wha! I'm not sleeping! I absolutely wasn't sleeping just now!"); break;
@@ -115,6 +103,8 @@ bot.on('message', message => {
           case 22: botschannel.send ("I'm not letting you go home tonight..."); break;
           case 23: botschannel.send ("I shined brighter and brighter so I wouldn't be outshined by the light I reached for. Before I realized it, that light became my own. That light is now shining the way for someone else."); break;
           case 24: botschannel.send ("Good work everyday, Maneko-chan! Thanks for making our everyday inspiring and happy! Here, I'll give you this Momorin with limited edition wrapper!"); break;
+          case 25: botschannel.send ("If I'm being honest, I think everyone's an unsung hero in their own right. They all live and do things in their own way. And just by doing that, they make the world go 'round.\n But if we're not valued, we'll forget  that, and make mistakes. So, what we're really doing is just reminding all thos epeople of the fact they're heroes."); break;
+          case 26: botschannel.send ("Anyone will get depressed if they're treated like nothing but extras. Even me."); break;
        }
      }
 
@@ -135,7 +125,7 @@ bot.on('message', message => {
          .setDescription("Do not include < > when using commands. \nCommand phrases are not caps sensitive")
          .setColor("#fe00b6")
          .addField("Commands:","**m!momo** *<question>* | Ask him anything. \n**m!send** *<@user> <message>* | Send a DM to the mentioned user\n**m!scout** | Solo Yolo \n**m!quote** | Random quote\n**m!say** *<message>* | Have the bot say anything you want\n**m!help** | Displays this help message")
-         .addField("Basic m!commands:", "mafia (alias:maf) || ryo || rank")
+         .addField("Basic m!commands:", "mafia (alias:maf) || ryo")
          .addField("Command phrases:", "I can't believe Ryo is dead || Hey gays || Good morning Momo || Good night Momo")
          return botschannel.send(helpembed);
        }
@@ -146,7 +136,7 @@ bot.on('message', message => {
          .setDescription("Bot Information")
          .setColor("#fe00b6")
          .setThumbnail(bicon)
-         .addField("# of quotes:", "24")
+         .addField("# of quotes:", "26")
          .addField("Scout:", "42 cards")
        return botschannel.send(botembed);
        }
@@ -154,7 +144,7 @@ bot.on('message', message => {
          if(cmd === `${prefix}say`){
            let botmessage = args.join(" ");
            message.delete().catch();
-           return message.channel.send(botmessage);
+           botschannel.send(botmessage);
        }
 
        if(cmd === `${prefix}mafia` || cmd === `${prefix}maf`){
@@ -165,10 +155,6 @@ bot.on('message', message => {
          return botschannel.send("Oh fuck. Bastard spotted.");
        }
 
-      if(cmd === `${prefix}cat`){
-        return botschannel.send ({files:["./images/nya.png"]});
-  }
-  
 });
 
 bot.login(process.env.token);
