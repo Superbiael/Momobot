@@ -144,7 +144,7 @@ bot.on('message', message => {
          if(cmd === `${prefix}say`){
            let botmessage = args.join(" ");
            message.delete().catch();
-           botschannel.send(botmessage);
+           return message.channel.send(botmessage);
        }
 
        if(cmd === `${prefix}mafia` || cmd === `${prefix}maf`){
