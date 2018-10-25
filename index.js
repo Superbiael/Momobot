@@ -62,11 +62,20 @@ bot.on('message', message => {
       }
     }
 
-    if (msg.startsWith (prefix + "scout")) {
-      number = 42;
-      imageNumber = Math.floor (Math.random() * (number)) + 1;
-      message.channel.send ({files: ["./scout/" + imageNumber + ".png"]})
-    }
+//     if (msg.startsWith (prefix + "scout")) {
+//       number = 47;
+//       imageNumber = Math.floor (Math.random() * (number)) + 1;
+//       message.channel.send ({files: ["./scout/" + imageNumber + ".png"]})
+//     }
+  
+   if (msg.startsWith (prefix + "scout")) {
+       number = 2;
+       var random = Math.floor (Math.random() * (number)) + 1;
+       switch (random) {
+         case 1: botschannel.send ({files:["./scout/46.png"]}); break;
+         case 2: botschannel.send ({files:["./scout/47.png"]}); break;
+       }
+   }
 
   if (msg.startsWith (prefix + "send")) {
        if (mention == null) { return; }
@@ -137,7 +146,7 @@ bot.on('message', message => {
          .setColor("#fe00b6")
          .setThumbnail(bicon)
          .addField("# of quotes:", "26")
-         .addField("Scout:", "42 cards")
+         .addField("Scout:", "47 cards")
        return botschannel.send(botembed);
        }
 
