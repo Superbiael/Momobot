@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-   if(!args[0]) return message.reply("Momo-chan doesn't understand what you just said! (∩´ ∀`)∩☆彡");
+   if(!args[0]) return message.reply("Ask me anything you like! I'll eve tell you about the weird marks on one of Yuki's cheeks!");
    let replies = [
      "Of course! (。≧ω≦)ノ",
      "That’s right~! ｡\*(\*´∀`\*)\*｡゜゜",
