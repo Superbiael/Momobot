@@ -67,11 +67,15 @@ bot.on('message', message => {
       return botschannel.send ({files: ["./images/mofumofu/" + imageNumber + ".png"]})
     }
 
-    if (msg.startsWith (prefix + "scout")) {
-      number = 47;
-      imageNumber = Math.floor (Math.random() * (number)) + 1;
-      return botschannel.send ({files: ["./images/scout/" + imageNumber + ".png"]})
-    }
+//     if (msg.startsWith (prefix + "scout")) {
+//       number = 47;
+//       imageNumber = Math.floor (Math.random() * (number)) + 1;
+//       return botschannel.send ({files: ["./images/scout/" + imageNumber + ".png"]})
+//     }
+  
+        if (msg.startsWith (prefix + "scout")) {
+         return botschannel.send ("You better watch out.", {files:["./images/scout/49.png"]});
+   }
 
   if (msg.startsWith (prefix + "send")) {
        if (mention == null) { return; }
@@ -111,6 +115,10 @@ bot.on('message', message => {
        }
      }
 
+        if (msg.startsWith (prefix + "watchout")) {
+         return botschannel.send ("You better watch out.", {files:["./images/nya.png"]});
+   }
+  
        if (msg.startsWith ("i can't believe ryo is dead")) {
          return botschannel.send("Finally.");
        }
