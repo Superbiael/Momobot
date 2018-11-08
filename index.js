@@ -81,7 +81,7 @@ bot.on('message', message => {
       }
 
       if(msg.startsWith (prefix + "quote")) {
-        number = 26;
+        number = 24;
         var random = Math.floor (Math.random() * (number)) + 1;
         switch (random) {
           case 1: botschannel.send ("... Wha! I'm not sleeping! I absolutely wasn't sleeping just now!"); break;
