@@ -162,7 +162,7 @@ bot.on('message', message => {
        }
 
        if(msg.startsWith (prefix + "kaomoji")) {
-         number = 25;
+         number = 26;
          var random = Math.floor (Math.random() * (number)) + 1;
          switch (random) {
            case 1: botschannel.send ("╰(｀・ω・)╮  −−＝＝≡≡≡🍜"); break;
@@ -190,6 +190,7 @@ bot.on('message', message => {
            case 23: botschannel.send ("／(・ᆺ・)＼"); break;
            case 24: botschannel.send ("┬┴┬┴┤(･_├┬┴┬┴"); break;
            case 25: botschannel.send ("	ヽ(o＾▽＾o)ノ"); break;
+           case 26: botschannel.send ("°.+:｡ドキ((((o • ω •)o)))ドキ°.+:｡♪">; break;
         }
       }
 
