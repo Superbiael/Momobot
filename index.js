@@ -190,7 +190,7 @@ bot.on('message', message => {
            case 23: botschannel.send ("／(・ᆺ・)＼"); break;
            case 24: botschannel.send ("┬┴┬┴┤(･_├┬┴┬┴"); break;
            case 25: botschannel.send ("	ヽ(o＾▽＾o)ノ"); break;
-           case 26: botschannel.send ("°.+:｡ドキ((((o • ω •)o)))ドキ°.+:｡♪">; break;
+           case 26: botschannel.send ("°.+:｡ドキ((((o • ω •)o)))ドキ°.+:｡♪"); break;
         }
       }
 
