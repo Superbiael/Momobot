@@ -74,11 +74,12 @@ bot.on('message', message => {
     // }
 
     if (msg.startsWith (prefix + "scout")) {
-        number = 2;
+        number = 3;
         var random = Math.floor (Math.random() * (number)) + 1;
         switch (random) {
           case 1: botschannel.send ({files:["./images/scout/48.png"]}); break;
           case 2: botschannel.send ({files:["./images/scout/49.png"]}); break;
+          case 3: botschannel.send ({files:["./images/scout/50.png"]}); break;
        }
      }
 
