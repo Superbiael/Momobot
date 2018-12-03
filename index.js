@@ -67,21 +67,11 @@ bot.on('message', message => {
       return botschannel.send ({files: ["./images/mofumofu/" + imageNumber + ".png"]})
     }
 
-    // if (msg.startsWith (prefix + "scout")) {
-    //   number = 49;
-    //   imageNumber = Math.floor (Math.random() * (number)) + 1;
-    //   return botschannel.send ({files: ["./images/scout/" + imageNumber + ".png"]})
-    // }
-
     if (msg.startsWith (prefix + "scout")) {
-        number = 3;
-        var random = Math.floor (Math.random() * (number)) + 1;
-        switch (random) {
-          case 1: botschannel.send ({files:["./images/scout/48.png"]}); break;
-          case 2: botschannel.send ({files:["./images/scout/49.png"]}); break;
-          case 3: botschannel.send ({files:["./images/scout/50.png"]}); break;
-       }
-     }
+      number = 49;
+      imageNumber = Math.floor (Math.random() * (number)) + 1;
+      return botschannel.send ({files: ["./images/scout/" + imageNumber + ".png"]})
+    }
 
   if (msg.startsWith (prefix + "send")) {
        if (mention == null) { return; }
