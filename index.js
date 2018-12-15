@@ -67,11 +67,15 @@ bot.on('message', message => {
       return botschannel.send ({files: ["./images/mofumofu/" + imageNumber + ".png"]})
     }
 
-    if (msg.startsWith (prefix + "scout")) {
-      number = 49;
-      imageNumber = Math.floor (Math.random() * (number)) + 1;
-      return botschannel.send ({files: ["./images/scout/" + imageNumber + ".png"]})
-    }
+//     if (msg.startsWith (prefix + "scout")) {
+//       number = 51;
+//       imageNumber = Math.floor (Math.random() * (number)) + 1;
+//       return botschannel.send ({files: ["./images/scout/" + imageNumber + ".png"]})
+//     }
+  
+   if (msg.startsWith (prefix + "scout")) {
+    return botschannel.send ({files:["./images/scout/51.png"]});
+  }
 
   if (msg.startsWith (prefix + "send")) {
        if (mention == null) { return; }
